@@ -39,72 +39,83 @@
       <form action="https://echo.htmlacademy.ru" method="get">
         <ul class="form-list">
           <li class="form-list__item">
-            <fieldset>
-              <legend>
+            <fieldset class="form-list__item__wrapper">
+              <h2 class="form-list__title">Представьтесь:</h2>
+              <!-- а нормально ли такие элементы тоже привязывать к классу списка, или только теги li? -->
+              <div class="form-list__field">
+                <label for="name">Имя*:</label>
+                <input class="form-list__name form-list__name--big" type="text" placeholder="Петр" id="name" required>
+              </div>
+              <div class="form-list__field">
+                <label for="last-name">Фамилия*:</label>
+                <input class="form-list__name" type="text" placeholder="Иванов" id="last-name" required>
+              </div>
+              <div class="form-list__field">
+                <label for="father-name">Отчество:</label>
+                <input class="form-list__name" type="text" placeholder="Александрович" id="father-name">
+              </div>
             </fieldset>
-            <h2 class="form-list__title">Представьтесь:</h2>
-            <!-- а нормально ли такие элементы тоже привязывать к классу списка, или только теги li? -->
-            <div class="form-list__field">
-              <label for="name">Имя*:</label>
-              <input class="form-list__name form-list__name--big" type="text" placeholder="Петр" id="name" required>
-            </div>
-            <div class="form-list__field">
-              <label for="last-name">Фамилия*:</label>
-              <input class="form-list__name" type="text" placeholder="Иванов" id="last-name" required>
-            </div>
-            <div class="form-list__field">
-              <label for="father-name">Отчество:</label>
-              <input class="form-list__name" type="text" placeholder="Александрович" id="father-name">
-            </div>
           </li>
           <li class="form-list__item">
-            <h2 class="form-list__title">Контактная информация:</h2>
-            <div class="form-list__field">
-              <label for="contact-telefone">Контактный телефон*:</label>
-              <input class="form-list__contacts" type="text" placeholder="Введите телефон" id="contact-telefone" required>
-            </div>
-            <div class="form-list__field">
-              <label for="email">Электронная почта*:</label>
-              <input class="form-list__contacts" type="text" placeholder="Введите e-mail" id="email" required>
-            </div>
+            <fieldset class="form-list__item__wrapper">
+              <h2 class="form-list__title">Контактная информация:</h2>
+              <div class="form-list__field">
+                <label for="contact-telefone">Контактный телефон*:</label>
+                <input class="form-list__contacts" type="text" placeholder="Введите телефон" id="contact-telefone" required>
+              </div>
+              <div class="form-list__field">
+                <label for="email">Электронная почта*:</label>
+                <input class="form-list__contacts" type="text" placeholder="Введите e-mail" id="email" required>
+              </div>
+            </fieldset>
           </li>
           <li class="form-list__item">
-            <h2 class="form-list__title">Ваше общее впечатление:</h2>
-            <div class="form-list__field">
-              <input class="form-list__contacts" type="radio" id="positive" checked>
-              <label for="positive">Скорее положительное</label>
-            </div>
-            <div class="form-list__field">
-              <input class="form-list__contacts" type="radio" id="negative">
-              <label for="negative">Скорее отрицательное</label>
-            </div>
-            <div class="form-list__field">
-              <input class="form-list__contacts" type="radio" id="dunno">
-              <label for="dunno">Затрудняюсь ответить</label>
-            </div>
+            <fieldset class="form-list__item__wrapper">
+              <h2 class="form-list__title">Ваше общее впечатление:</h2>
+              <ul class="form-list__field radio-list">
+                <li class="radio-list__item">
+                  <input class="radio-field" type="radio" id="positive" checked>
+                  <label for="positive">Скорее положительное</label>
+                </li>
+                <li class="radio-list__item">
+                  <input class="radio-field" type="radio" id="negative">
+                  <label for="negative">Скорее отрицательное</label>
+                </li>
+                <li class="radio-list__item">
+                  <input class="radio-field" type="radio" id="dunno">
+                  <label for="dunno">Затрудняюсь ответить</label>
+                </li>
+              </ul>
+            </fieldset>
           </li>
           <li class="form-list__item">
-            <h2 class="form-list__title">Посещенные достопримечательности:</h2>
-            <div class="form-list__field">
-              <input class="form-list__sight" type="checkbox" name="form__sight1" id="sight1" checked>
-              <label for="sight1">Мост Дьявола</label>
-            </div>
-            <div class="form-list__field">
-              <input class="form-list__sight" type="checkbox" name="form__sight2" id="sight2" checked>
-              <label for="sight2">Гора-Колокол</label>
-            </div>
-            <div class="form-list__field">
-              <input class="form-list__sight" type="checkbox" name="form__sight3" id="sight3" checked>
-              <label for="sight3">Слайд-парк</label>
-            </div>
-            <div class="form-list__field">
-              <input class="form-list__sights" type="checkbox" name="form__sight4" id="sight4">
-              <label for="sight4">Красные скалы</label>
-            </div>
+            <fieldset class="form-list__item__wrapper">
+              <h2 class="form-list__title">Посещенные достопримечательности:</h2>
+              <ul class="form-list__field checkbox--list">
+                <li class="checkbox-list__item">
+                  <input class="checkbox-field" type="checkbox" name="checkbox-field1" id="sight1" checked>
+                  <label for="sight1">Мост Дьявола</label>
+                </li>
+                <li class="checkbox-list__item">
+                  <input class="checkbox-field" type="checkbox" name="checkbox-field2" id="sight2" checked>
+                  <label for="sight2">Гора-Колокол</label>
+                </li>
+                <li class="checkbox-list__item">
+                  <input class="checkbox-field" type="checkbox" name="checkbox-field3" id="sight3" checked>
+                  <label for="sight3">Слайд-парк</label>
+                </li>
+                <li class="checkbox-list__item">
+                  <input class="checkbox-field" type="checkbox" name="checkbox-field4" id="sight4">
+                  <label for="sight4">Красные скалы</label>
+                </li>
+              </ul>
+            </fieldset>
           </li>
           <li class="form-list__item">
-            <h2 class="form-list__title">Опишите свои эмоции:</h2>
-            <textarea name="form-list__comment" placeholder="">Опишите подробно все свои восторги</textarea>
+            <fieldset class="form-list__item__wrapper">
+              <h2 class="form-list__title">Опишите свои эмоции:</h2>
+              <textarea name="form-list__comment" placeholder="">Опишите подробно все свои восторги</textarea>
+            </fieldset>
           </li>
         </ul>
         <input class="form-submit btn" type="submit" value="Отправить отзыв">
