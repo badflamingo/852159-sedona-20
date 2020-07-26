@@ -6,120 +6,139 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="logo">
+    <a class="logo">
       <img width="101" height="84" alt="city of Sedona" src="https://via.placeholder.com/150x150">
-    </div>
+    </a>
     <button class="list-button list-button--opened" type="button"></button>
     <nav class="navigation navigation--opened">
       <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="index.html">Главная</a>
+        </li>
         <li class="navigation__item navigation__item--active">
-          <a href="index.html"></a>
+          <a href="photo.html">Фото и видео</a>
         </li>
         <li class="navigation__item">
-          <a href="photo.html"></a>
+          <a href="form.html">Форма отзыва</a>
         </li>
         <li class="navigation__item">
-          <a href="form.html"></a>
+          <a href="https://echo.htmlacademy.ru">HTML academy</a>
         </li>
-        <li class="navigation__item">
-          <a href="https://echo.htmlacademy.ru"></a>
-        </li>  
-      </ul>        
+      </ul>
     </nav>
-    
     <div class="intro intro-other">
       <img width="901" height="389" alt="Welcome to the gorgeous Sedona" src="https://via.placeholder.com/150x150">
-      
     </div>
   </header>
   <section class="photos">
     <div class="photos-header">
       <h1 class="photos__title">Фото и видео</h1>
-      <p class="photos__description">Фото и видео  Не можете решиться на путешествие из-за курса? 
-        Фотографии помогут вам забыть о политике и экономике.
+      <p class="photos__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
       </p>
     </div>
-    <div class="photo">
-      <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
-      <a href="https://echo.htmlacademy.ru">
-        <span class="photo__title">Неродные просторы</span>
-        <span class="photo__author">Автор фото: Борис</span>
-      </a>
-      <div class="likes">
-        <svg class="likes__icon">  
-        </svg> 
-        <span class="likes__counter">1350</span>
-      </div>
-    </div>
-    
-    
-    <div class="photo">
-      <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
-      <a href="https://echo.htmlacademy.ru">
-        <span class="photo__title">Местная растительность</span>
-        <span class="photo__author">Автор фото: Сергей</span>
-      </a>
-      <div class="likes">
-        <svg class="likes__icon">  
-        </svg> 
-        <span class="likes__counter">143</span>
-      </div>
-    </div>
-    <div class="photo">
-      <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
-      <a href="https://echo.htmlacademy.ru">
-        <span class="photo__title">Дорога на север</span>
-        <span class="photo__author">Автор фото: Петр</span>
-      </a>
-      <div class="likes">
-        <svg class="likes__icon">  
-        </svg> 
-        <span class="likes__counter">96</span>
-      </div>
-    </div>
-    <div class="photo">
-      <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
-      <a href="https://echo.htmlacademy.ru">
-        <span class="photo__title">Мост дьявола</span>
-        <span class="photo__author">Автор фото: Антон</span>
+    <ul class="photos__container photo">
+      <li class="photo__item">
+        <a href="https://echo.htmlacademy.ru">
+          <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
+        </a>
+        <h3 class="photo__title">Неродные просторы</h3>
+        <p class="photo__author">Автор фото: Борис</p>
         <div class="likes">
-          <svg class="likes__icon">  
-          </svg> 
-          <span class="likes__counter">254</span>
+          <svg class="likes__icon">
+          </svg>
+          <span class="likes__counter">1350</span>
         </div>
-      </a>
+      </li>
+      <li class="photo__item">
+        <div class="photo">
+          <a href="https://echo.htmlacademy.ru">
+            <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
+          </a>
+          <h3 class="photo__title">Местная растительность</h3>
+          <p class="photo__author">Автор фото: Сергей</p>
+          <div class="likes">
+            <svg class="likes__icon">
+            </svg>
+            <span class="likes__counter">143</span>
+          </div>
+        </div>
+      </li>
+      <li class="photo__item">
+        <div class="photo">
+          <a href="https://echo.htmlacademy.ru">
+            <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
+          </a>
+          <h3 class="photo__title">Дорога на север</h3>
+          <p class="photo__author">Автор фото: Петр</p>
+          <div class="likes">
+            <svg class="likes__icon">
+            </svg>
+            <span class="likes__counter">96</span>
+          </div>
+        </div>
+      </li>
+      <li class="photo__item">
+        <div class="photo">
+          <a href="https://echo.htmlacademy.ru">
+            <img width="280" height="280" alt="изображение" src="https://via.placeholder.com/150x150">
+          </a>
+          <h3 class="photo__title">Мост дьявола</h3>
+          <p class="photo__author">Автор фото: Антон</p>
+          <div class="likes">
+            <svg class="likes__icon"></svg>
+            <span class="likes__counter">254</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="video">
+    <h2 class="video__title">Все еще сомневаетесь?</h2>
+    <p class="video__text">Cмотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+    <div class="video__player>">
+      <div class="video__control control">
+        <div class="control__volume">
+        </div>
+        <div class="control__button">
+          <button class="control__repeat">
+          </button>
+          <button class="control__sub">
+          </button>
+          <button class="control__fullscreen">
+          </button>
+        </div>
+      </div>
     </div>
   </section>
   <footer class="page-footer">
-    <div class="hashtag">
-    </div>
+    <p class="hashtag">#VISITSEDONA
+    </p>
     <div class="social">
-      <div class="social__icon">
-        <a class="icon-twitter" href="https://echo.htmlacademy.ru">
-          <svg class="icon-twitter"> </svg>
-        </a>
-      </div>
-      <div class="social__icon">
-        <a class="icon-facebook" href="https://echo.htmlacademy.ru">
-          <svg class="icon-facebook"></svg>
-        </a>
-      </div>
-      <div class="social__icon">
-        <a class="icon-youtube" href="https://echo.htmlacademy.ru">
-          <svg class="icon-youtube"></svg>
-        </a>
-      </div>
+      <ul class="social-list">
+        <li class="social-list__icon">
+          <a class="icon-twitter" href="https://echo.htmlacademy.ru">
+            <svg class="icon-twitter"></svg>
+          </a>
+        </li>
+        <li class="social-list__icon">
+          <a class="icon-facebook" href="https://echo.htmlacademy.ru">
+            <svg class="icon-facebook"></svg>
+          </a>
+        </li>
+        <li class="social-list__icon">
+          <a class="icon-youtube" href="https://echo.htmlacademy.ru">
+            <svg class="icon-youtube"></svg>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="academy-link">
-      <a class="icon-youtube" href="https://echo.htmlacademy.ru">
-        <span class="academy-link__ex">Разработано</span>
-        <svg class="academy-icon"></svg>
+    <div class="academy-block">
+      <a class="academy-link" href="https://echo.htmlacademy.ru">
+        <p class="academy-link__ex">Разработано
+          <svg class="academy-icon"></svg>
+        </p>
       </a>
-      
     </div>
   </footer>
-  
-  
-  
 </body>
 </html>

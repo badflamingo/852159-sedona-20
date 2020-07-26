@@ -6,65 +6,138 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="logo">
+    <a class="logo">
       <img width="101" height="84" alt="city of Sedona" src="https://via.placeholder.com/150x150">
-    </div>
+    </a>
     <button class="list-button list-button--opened" type="button"></button>
     <nav class="navigation navigation--opened">
       <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="navigation__item">
+          <a href="photo.html">Фото и видео</a>
+        </li>
         <li class="navigation__item navigation__item--active">
-          <a href="index.html"></a>
+          <a href="form.html">Форма отзыва</a>
         </li>
         <li class="navigation__item">
-          <a href="photo.html"></a>
+          <a href="https://echo.htmlacademy.ru">HTML academy</a>
         </li>
-        <li class="navigation__item">
-          <a href="form.html"></a>
-        </li>
-        <li class="navigation__item">
-          <a href="https://echo.htmlacademy.ru"></a>
-        </li>  
-      </ul>        
+      </ul>
     </nav>
-    
     <div class="intro intro-other">
       <img width="901" height="389" alt="Welcome to the gorgeous Sedona" src="https://via.placeholder.com/150x150">
-      
     </div>
   </header>
   <section class="form">
-    
-  </section>
-  <footer class="page-footer">
-    <div class="hashtag">
-    </div>
-    <div class="social">
-      <div class="social__icon">
-        <a class="icon-twitter" href="https://echo.htmlacademy.ru">
-          <svg class="icon-twitter"> </svg>
+    <div class="form-header">
+      <h1 class="form__title">Оставьте свой отзыв</h1>
+      <p class="form__description">Помогите нашим отелям стать лучше!
+        Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="form-item">
+          <legend class="form-item__title">Представьтесь:</legend>
+          <div class="form-item__field">
+            <label for="name">Имя*:</label>
+            <input class="form-item__name form-item__name--big" type="text" placeholder="Петр" id="name" required>
+          </div>
+          <div class="form-item__field">
+            <label for="last-name">Фамилия*:</label>
+            <input class="form-item__name" type="text" placeholder="Иванов" id="last-name" required>
+          </div>
+          <div class="form-item__field">
+            <label for="father-name">Отчество:</label>
+            <input class="form-item__name" type="text" placeholder="Александрович" id="father-name">
+          </div>
+        </fieldset>
+        <fieldset class="form-item">
+          <legend class="form-item__title">Контактная информация:</legend>
+          <div class="form-item__field">
+            <label for="contact-telefone">Контактный телефон*:</label>
+            <input class="form-item__contacts" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон" name="contact-telefone" id="contact-telefone" required>
+          </div>
+          <div class="form-item__field">
+            <label for="contact-email">Электронная почта*:</label>
+            <input class="form-item_contacts" type="email" placeholder="Введите e-mail" name="contact-email" id="contact-email" required>
+          </div>
+        </fieldset>
+        <fieldset class="form-item">
+          <legend class="form-item__title">Ваше общее впечатление:</legend>
+          <ul class="form-item__field radio-list">
+            <li class="radio-list__item">
+              <input class="radio-field" type="radio" id="positive" checked>
+              <label for="positive">Скорее положительное</label>
+            </li>
+            <li class="radio-list__item">
+              <input class="radio-field" type="radio" id="negative">
+              <label for="negative">Скорее отрицательное</label>
+            </li>
+            <li class="radio-list__item">
+              <input class="radio-field" type="radio" id="dunno">
+              <label for="dunno">Затрудняюсь ответить</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form-item">
+          <legend class="form-item__title">Посещенные достопримечательности:</legend>
+          <ul class="form-item__field checkbox--list">
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field1" id="sight1" checked>
+              <label for="sight1">Мост Дьявола</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field2" id="sight2" checked>
+              <label for="sight2">Гора-Колокол</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field3" id="sight3" checked>
+              <label for="sight3">Слайд-парк</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field4" id="sight4">
+              <label for="sight4">Красные скалы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form-field">
+          <legend class="form-item__title">Опишите свои эмоции:</legend>
+          <textarea name="form-item__comment" placeholder="">Опишите подробно все свои восторги</textarea>
+        </fieldset>
+        <input class="form-submit btn" type="submit" value="Отправить отзыв">
+      </form>
+    </section>
+    <footer class="page-footer">
+      <p class="hashtag">
+        #VISITSEDONA
+      </p>
+      <div class="social">
+        <ul class="social-list">
+          <li class="social-list__icon">
+            <a class="icon-twitter" href="https://echo.htmlacademy.ru">
+              <svg class="icon-twitter"></svg>
+            </a>
+          </li>
+          <li class="social-list__icon">
+            <a class="icon-facebook" href="https://echo.htmlacademy.ru">
+              <svg class="icon-facebook"></svg>
+            </a>
+          </li>
+          <li class="social-list__icon">
+            <a class="icon-youtube" href="https://echo.htmlacademy.ru">
+              <svg class="icon-youtube"></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="academy-block">
+        <a class="academy-link" href="https://echo.htmlacademy.ru">
+          <p class="academy-link__ex">Разработано
+            <svg class="academy-icon"></svg>
+          </p>
         </a>
       </div>
-      <div class="social__icon">
-        <a class="icon-facebook" href="https://echo.htmlacademy.ru">
-          <svg class="icon-facebook"></svg>
-        </a>
-      </div>
-      <div class="social__icon">
-        <a class="icon-youtube" href="https://echo.htmlacademy.ru">
-          <svg class="icon-youtube"></svg>
-        </a>
-      </div>
-    </div>
-    <div class="academy-link">
-      <a class="icon-youtube" href="https://echo.htmlacademy.ru">
-        <span class="academy-link__ex">Разработано</span>
-        <svg class="academy-icon"></svg>
-      </a>
-      
-    </div>
-  </footer>
-  
-  
-  
-</body>
-</html>
+    </footer>
+  </body>
+  </html>
