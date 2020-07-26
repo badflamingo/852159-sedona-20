@@ -37,91 +37,80 @@
         Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <ul class="form-list">
-          <li class="form-list__item">
-            <fieldset class="form-list__item__wrapper">
-              <legend class="form-list__title">Представьтесь:</legend>
-              <div class="form-list__field">
-                <label for="name">Имя*:</label>
-                <input class="form-list__name form-list__name--big" type="text" placeholder="Петр" id="name" required>
-              </div>
-              <div class="form-list__field">
-                <label for="last-name">Фамилия*:</label>
-                <input class="form-list__name" type="text" placeholder="Иванов" id="last-name" required>
-              </div>
-              <div class="form-list__field">
-                <label for="father-name">Отчество:</label>
-                <input class="form-list__name" type="text" placeholder="Александрович" id="father-name">
-              </div>
-            </fieldset>
-          </li>
-          <li class="form-list__item">
-            <fieldset class="form-list__item__wrapper">
-              <legend class="form-list__title">Контактная информация:</legend>
-              <div class="form-list__field">
-                <label for="contact-telefone">Контактный телефон*:</label>
-                <input class="form-list__contacts" type="text" placeholder="Введите телефон" id="contact-telefone" required>
-              </div>
-              <div class="form-list__field">
-                <label for="email">Электронная почта*:</label>
-                <input class="form-list__contacts" type="text" placeholder="Введите e-mail" id="email" required>
-              </div>
-            </fieldset>
-          </li>
-          <li class="form-list__item">
-            <fieldset class="form-list__item__wrapper">
-              <legend class="form-list__title">Ваше общее впечатление:</legend>
-              <ul class="form-list__field radio-list">
-                <li class="radio-list__item">
-                  <input class="radio-field" type="radio" id="positive" checked>
-                  <label for="positive">Скорее положительное</label>
-                </li>
-                <li class="radio-list__item">
-                  <input class="radio-field" type="radio" id="negative">
-                  <label for="negative">Скорее отрицательное</label>
-                </li>
-                <li class="radio-list__item">
-                  <input class="radio-field" type="radio" id="dunno">
-                  <label for="dunno">Затрудняюсь ответить</label>
-                </li>
-              </ul>
-            </fieldset>
-          </li>
-          <li class="form-list__item">
-            <fieldset class="form-list__item__wrapper">
-              <legend class="form-list__title">Посещенные достопримечательности:</legend>
-              <ul class="form-list__field checkbox--list">
-                <li class="checkbox-list__item">
-                  <input class="checkbox-field" type="checkbox" name="checkbox-field1" id="sight1" checked>
-                  <label for="sight1">Мост Дьявола</label>
-                </li>
-                <li class="checkbox-list__item">
-                  <input class="checkbox-field" type="checkbox" name="checkbox-field2" id="sight2" checked>
-                  <label for="sight2">Гора-Колокол</label>
-                </li>
-                <li class="checkbox-list__item">
-                  <input class="checkbox-field" type="checkbox" name="checkbox-field3" id="sight3" checked>
-                  <label for="sight3">Слайд-парк</label>
-                </li>
-                <li class="checkbox-list__item">
-                  <input class="checkbox-field" type="checkbox" name="checkbox-field4" id="sight4">
-                  <label for="sight4">Красные скалы</label>
-                </li>
-              </ul>
-            </fieldset>
-          </li>
-          <li class="form-list__item">
-            <fieldset class="form-list__item__wrapper">
-              <legend class="form-list__title">Опишите свои эмоции:</legend>
-              <textarea name="form-list__comment" placeholder="">Опишите подробно все свои восторги</textarea>
-            </fieldset>
-          </li>
-        </ul>
+        <fieldset class="form-item">
+          <legend class="form-item__title">Представьтесь:</legend>
+          <div class="form-item__field">
+            <label for="name">Имя*:</label>
+            <input class="form-item__name form-item__name--big" type="text" placeholder="Петр" id="name" required>
+          </div>
+          <div class="form-item__field">
+            <label for="last-name">Фамилия*:</label>
+            <input class="form-item__name" type="text" placeholder="Иванов" id="last-name" required>
+          </div>
+          <div class="form-item__field">
+            <label for="father-name">Отчество:</label>
+            <input class="form-item__name" type="text" placeholder="Александрович" id="father-name">
+          </div>
+        </fieldset>
+        <fieldset class="form-item">
+          <legend class="form-item__title">Контактная информация:</legend>
+          <div class="form-item__field">
+            <label for="contact-telefone">Контактный телефон*:</label>
+            <input class="form-item__contacts" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон" name="contact-telefone" id="contact-telefone" required>
+          </div>
+          <div class="form-item__field">
+            <label for="contact-email">Электронная почта*:</label>
+            <input class="form-item_contacts" type="email" placeholder="Введите e-mail" name="contact-email" id="contact-email" required>
+          </div>
+        </fieldset>
+        <fieldset class="form-item">
+          <legend class="form-item__title">Ваше общее впечатление:</legend>
+          <ul class="form-item__field radio-list">
+            <li class="radio-list__item">
+              <input class="radio-field" type="radio" id="positive" checked>
+              <label for="positive">Скорее положительное</label>
+            </li>
+            <li class="radio-list__item">
+              <input class="radio-field" type="radio" id="negative">
+              <label for="negative">Скорее отрицательное</label>
+            </li>
+            <li class="radio-list__item">
+              <input class="radio-field" type="radio" id="dunno">
+              <label for="dunno">Затрудняюсь ответить</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form-item">
+          <legend class="form-item__title">Посещенные достопримечательности:</legend>
+          <ul class="form-item__field checkbox--list">
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field1" id="sight1" checked>
+              <label for="sight1">Мост Дьявола</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field2" id="sight2" checked>
+              <label for="sight2">Гора-Колокол</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field3" id="sight3" checked>
+              <label for="sight3">Слайд-парк</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-field" type="checkbox" name="checkbox-field4" id="sight4">
+              <label for="sight4">Красные скалы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form-field">
+          <legend class="form-item__title">Опишите свои эмоции:</legend>
+          <textarea name="form-item__comment" placeholder="">Опишите подробно все свои восторги</textarea>
+        </fieldset>
         <input class="form-submit btn" type="submit" value="Отправить отзыв">
       </form>
     </section>
     <footer class="page-footer">
-      <p class="hashtag">#VISITSEDONA
+      <p class="hashtag">
+        #VISITSEDONA
       </p>
       <div class="social">
         <ul class="social-list">
