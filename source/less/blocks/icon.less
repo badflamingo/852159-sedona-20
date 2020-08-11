@@ -13,3 +13,20 @@
   margin: 0 auto;
   font-size: 14px;
 }
+
+.icon-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .icon-wrap {
+    flex-direction: row;
+  }
+  .advantage__icon--burger {
+    order: -1;
+  }
+  .advantage__icon--house {
+    order: -2;
+  }
+}
