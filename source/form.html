@@ -39,7 +39,8 @@
         Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="form-item">
+        <div class="form-item__wrapper">
+        <fieldset class="form-item form-item--half">
           <legend class="form-item__title">Представьтесь:</legend>
           <div class="form-item__field">
             <label for="name">Имя*:</label>
@@ -67,7 +68,7 @@
             <div class="form-item__icon form-item__icon--mail"> </div>
           </div>
         </fieldset>
-        <fieldset class="form-item">
+        <fieldset class="form-item form-item--half">
           <legend class="form-item__title">Ваше общее впечатление:</legend>
           <ul class="form-item__field radio-list">
             <li class="radio-list__item">
@@ -110,6 +111,7 @@
           <textarea name="form-item__comment" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <input class="form__submit btn" type="submit" value="Отправить отзыв">
+      </div>
       </form>
     </section>
     <footer class="page-footer">

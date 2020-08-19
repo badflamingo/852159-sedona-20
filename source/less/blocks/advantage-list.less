@@ -1,9 +1,16 @@
 .advantage-list {
+  display: flex;
+  flex-direction: column;
   margin: auto 0;
   padding: 0;
+  @media (min-width: @tablet-width) {
+display: block;
+
+  }
 }
 
 .advantage-list__item {
+    min-height: 170px;
   font-size: 14px;
   line-height: 26px;
 }
@@ -11,9 +18,12 @@
 .advantage-list__item--blue {
   color: #ffffff;
   background-color: #81b3d2;
+    // height: 191px;
 }
 
 .advantage-list__item--grey {
+  padding: 20px;
   color: #000000;
   background-color: #eeeeee;
+
 }

@@ -1,5 +1,32 @@
 .form-item {
   border: none;
+  margin: 0;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    &:nth-child(3) {
+      order: -1;
+    }
+  }
+}
+
+.form-item--half {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 296px;
+  }
+}
+
+.form-item__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
 }
 
 .form-item__title {
@@ -36,7 +63,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #000000;
-  background: #f2f2f2;
+  background: @grey;
 }
 
 .form-item__icon {
@@ -80,7 +107,7 @@
   font-weight: bold;
   color: #000000;
   text-transform: none;
-  background: #f2f2f2;
+  background: @grey;
 }
 
 .form-item textarea:placeholder {

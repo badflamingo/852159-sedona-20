@@ -17,16 +17,19 @@
 .icon-wrap {
   display: flex;
   flex-direction: column;
-}
 
-@media (min-width: 768px) {
-  .icon-wrap {
+  @media (min-width: @tablet-width) {
     flex-direction: row;
   }
-  .advantage__icon--burger {
+}
+
+.advantage__icon--burger {
+  @media (min-width: @tablet-width) {
     order: -1;
   }
-  .advantage__icon--house {
+}
+.advantage__icon--house {
+  @media (min-width: @tablet-width) {
     order: -2;
   }
 }

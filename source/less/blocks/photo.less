@@ -6,8 +6,19 @@
 .photo__item {
   font-size: 14px;
   line-height: 24px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid @grey-hover;
   padding: 23px 20px 13px 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: @grey;
+    padding: 0;
+    width: 50%;
+    &:nth-child(1) {
+      width: 100%;
+    }
+  }
 }
 
 .photo__title {
