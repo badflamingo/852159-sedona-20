@@ -1,5 +1,27 @@
-// .advantage {
-// }
+.advantage {
+
+  @media (min-width: @tablet-width) {
+display: flex;
+flex-direction: row;
+}
+}
+
+.advantage__wrap {
+
+
+  @media (min-width: @tablet-width) {
+    //
+    // padding: 15.6% 12.5% 17.2%; почему все ползет если задавать паддинг в процентах?
+      width: 33%;
+
+  }
+
+  @media (min-width: @desktop-width) {
+    // padding: 53px 20px 40px 20px;
+  }
+
+}
+
 .advantage__title {
   font-size: 21px;
   line-height: 26px;
@@ -12,13 +34,23 @@
 
 .advantage__description {
   font-size: 14px;
-  margin: 0 auto;
+  line-height: 21px;
+  margin: 0;
 }
 // .advantage__picture {
 // }
 // .icon-wrap {
 //
 // }
-.advantage__icon {
-  background-color: #ffffff;
+
+.advantage__picture--wrapper {
+  // тут вопросик что делать если картинка прячется кроме высоты,,
+
+
+  @media (min-width: @tablet-width) {
+  min-height: 256px;
+  width: 66.6%;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
 }

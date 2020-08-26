@@ -8,19 +8,46 @@
   line-height: 24px;
   border-top: 1px solid @grey-hover;
   padding: 23px 20px 13px 20px;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr 80px;
     background-color: @grey;
     padding: 0;
     width: 50%;
     &:nth-child(1) {
       width: 100%;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 33%;
+      flex-grow: 1;
+    }
   }
+}
+
+.photo__interactive {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+  @media (min-width: @desktop-width) {
+    z-index: 2;
+  }
+}
+
+.photo__description {
+
 }
 
 .photo__title {
   font-weight: bold;
+  margin: 0 auto;
+}
+
+.photo__author {
+  text-transform: none;
+  margin: 0 auto;
 }

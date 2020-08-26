@@ -1,6 +1,15 @@
 .icon {
   color: #000000;
+    background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+  padding: 60px 40px 62px 40px;
 }
+@media (min-width: @desktop-width) {
+  padding: 60px 40px 83px 40px;
+}
+}
+
 
 .icon__title {
   margin: 0 auto;
@@ -23,12 +32,20 @@
   }
 }
 
-.advantage__icon--burger {
+.icon__image {
+    @media (min-width: @tablet-width) {
+  width: 77px;
+  height: 75px;
+}
+}
+
+.icon--burger {
   @media (min-width: @tablet-width) {
     order: -1;
   }
 }
-.advantage__icon--house {
+
+.icon--house {
   @media (min-width: @tablet-width) {
     order: -2;
   }
