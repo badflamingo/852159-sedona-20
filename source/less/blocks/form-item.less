@@ -14,7 +14,8 @@
 
 .form-item {
   border: none;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -37,28 +38,53 @@
   @media (min-width: @tablet-width) {
     width: 50%;
     box-sizing: border-box;
-    height: 296px;
   }
 }
 
-.form-item--fieldset-name {
-  @media (min-width: @tablet-width) {
-    padding-left: 55px;
-  }
+// .form-item--fieldset-name {
+//
+// }
+
+.form-item__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
 }
 
 .form-item__field--name {
-  width: 280px;
-  margin: 0 auto;
   width: 100%;
+  display: inline-block;
+  margin: 20px auto 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+
   @media(min-width: @tablet-width) {
-    width: 50%%;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     flex-wrap: nowrap;
-    justify-content: space-between;
   }
+}
+
+.form-item__name {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: none;
+  background: @grey;
+  box-sizing: border-box;
+
+  @media(min-width: @tablet-width) {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+}
+
+.form-item__name:placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
 }
 
 .form-item__field--contact-wrap {
@@ -73,32 +99,10 @@
   }
 }
 
-.form-item__title {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-}
-
-.form-item__field {
-  width: 100%;
-  font-size: 14px;
-  line-height: 26px;
-  text-align: left;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #333333;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.form-item__field--name {
-  width: 100%;
-  margin: 0 auto 20px;
-}
-
+// .form-item__field--name {
+//   width: 100%;
+//   margin: 0 auto 20px;
+// }
 .form-item__field--contact {
 
   @media(min-width: @desktop-width) {
@@ -108,21 +112,6 @@
     flex-direction: row;
     align-items: stretch;
   }
-}
-
-.form-item__name {
-  width: auto;
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000;
-  text-transform: none;
-  background: @grey;
-}
-
-.form-item__name:placeholder {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000;
 }
 
 .form-item__contacts {
