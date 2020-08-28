@@ -1,3 +1,31 @@
+.navigation__list {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.navigation__item {
+  color: #000000;
+}
+
+.navigation__item:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-right: 20%;
+  }
+}
+
 .navigation__item a {
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+  }
 }

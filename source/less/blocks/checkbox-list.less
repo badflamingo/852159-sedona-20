@@ -1,13 +1,32 @@
 .checkbox-list {
+  display: block;
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
   text-align: left;
   color: #000000;
   text-transform: none;
   background: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }
-// .checkbox-list__item {
-// }
+
+.checkbox-list__item {
+  width: 47%;
+}
+
 .checkbox-list__field {
   width: 46px;
   height: 46px;

@@ -2,10 +2,12 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="page-body">
+<body>
+    <div class="page-wrap">
   <header class="page-header">
     <a class="logo">
       <img width="101" height="84" alt="city of Sedona" src="img/logo-sedona-mobile.svg">
@@ -37,30 +39,33 @@
       <p class="advantages__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     </div>
     <ul class="advantage-list">
-      <li class="advantage-list__item advantage-list__item--blue advantage">
+      <li class="advantage-list__item advantage-list__item--blue advantage-list__item--first">
+        <div class="advantage">
+        <div class="advantage__wrap">
         <h2 class="advantage__title">Настоящий городок</h2>
         <p class="advantage__number">-№1-</p>
         <p class="advantage__description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
-        <div class="advantage__picture">
-          <img width="520" height="260" alt="Motel of Sedona" src="https://via.placeholder.com/150x150">
+      </div>
+      <div class="advantage__picture--wrapper">
+        </div>
         </div>
         <div class="icon-wrap">
-          <div class="advantage__icon icon">
-            <img width="39" height="37" src="img/icon-house.svg" alt="house">
+          <div class="advantage__icon icon icon--house">
+            <img width="39" height="37" src="img/icon-house.svg" alt="house" class="icon__image">
             <div class="icon__description">
               <h3 class="icon__title">Жилье</h3>
               <p class="icon__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
           </div>
-          <div class="advantage__icon icon">
-            <img width="32" height="38" src="img/icon-gift.svg" alt="gift">
+          <div class="advantage__icon icon icon--gift">
+            <img width="32" height="38" src="img/icon-gift.svg" alt="gift" class="icon__image">
             <div class="icon__description">
               <h3 class="icon__title">Сувениры</h3>
               <p class="icon__text">Не только китайского, но и местного производства!</p>
             </div>
           </div>
-          <div class="advantage__icon icon">
-            <img width="40" height="35" src="img/icon-burger.svg" alt="burger">
+          <div class="advantage__icon icon icon--burger">
+            <img width="40" height="35" src="img/icon-burger.svg" alt="burger" class="icon__image">
             <div class="icon__description">
               <h3 class="icon__title">Еда</h3>
               <p class="icon__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
@@ -68,25 +73,28 @@
           </div>
         </div>
       </li>
-      <li class="advantage-list__item advantage-list__item--blue advantage">
+      <li class="advantage-list__item advantage-list__item--blue advantage-list__item--second">
+          <div class="advantage">
+              <div class="advantage__wrap">
         <h2 class="advantage__title">Там есть мост дьявола</h2>
         <p class="advantage__number">-№2-</p>
         <p class="advantage__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-        <div class="advantage__picture">
-          <img width="520" height="260" alt="Devil brige" src="https://via.placeholder.com/150x150">
+      </div>
+          <div class="advantage__picture--wrapper">
+
         </div>
       </li>
-      <li class="advantage-list__item advantage-list__item--grey advantage">
+      <li class="advantage-list__item advantage-list__item--grey advantage-list__item--third">
         <h2 class="advantage__title">Небольшая площадь</h2>
         <p class="advantage__number">-№3-</p>
         <p class="advantage__description">Все интересные места находятся очень близко</p>
       </li>
-      <li class="advantage-list__item advantage-list__item--grey advantage">
+      <li class="advantage-list__item advantage-list__item--grey advantage-list__item--fourth">
         <h2 class="advantage__title">Красивая дорога</h2>
         <p class="advantage__number">-№4-</p>
         <p class="advantage__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </li>
-      <li class="advantage-list__item advantage-list__item--grey advantage">
+      <li class="advantage-list__item advantage-list__item--grey advantage-list__item--fifth">
         <h2 class="advantage__title">Красивая дорога</h2>
         <p class="advantage__number">-№5-</p>
         <p class="advantage__description">Большинство едет в Гранд Каньон и толпится там</p>
@@ -106,7 +114,7 @@
     <div class="social-list__wrap">
       <ul class="social-list">
         <li>
-          <a class="social-list__item icon-twitter" href="https://echo.htmlacademy.ru">
+          <a class="social-list__item social-list__item--twitter" href="https://echo.htmlacademy.ru">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
               <g id="W6EeEF_1_">
                 <g>
@@ -117,14 +125,14 @@
           </a>
         </li>
         <li>
-          <a class="social-list__item icon-facebook" href="https://echo.htmlacademy.ru">
+          <a class="social-list__item social-list__item--facebook" href="https://echo.htmlacademy.ru">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
               <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
             </svg>
           </a>
         </li>
         <li>
-          <a class="social-list__item icon-youtube" href="https://echo.htmlacademy.ru">
+          <a class="social-list__item social-list__item--youtube" href="https://echo.htmlacademy.ru">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
               <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
             </svg>
@@ -142,5 +150,6 @@
       </a>
     </div>
   </footer>
+</div>
 </body>
 </html>

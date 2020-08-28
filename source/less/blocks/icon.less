@@ -1,6 +1,16 @@
 .icon {
   color: #000000;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 40px 62px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 40px 83px 40px;
+  }
 }
+
 
 .icon__title {
   margin: 0 auto;
@@ -12,4 +22,32 @@
 .icon__text {
   margin: 0 auto;
   font-size: 14px;
+}
+
+.icon-wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.icon__image {
+  @media (min-width: @tablet-width) {
+    width: 77px;
+    height: 75px;
+  }
+}
+
+.icon--burger {
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+}
+
+.icon--house {
+  @media (min-width: @tablet-width) {
+    order: -2;
+  }
 }

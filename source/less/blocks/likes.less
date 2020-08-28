@@ -1,10 +1,21 @@
-// .likes {
-// }
-//
-// .likes__icon {
-// }
+.likes {
+  display: inline-grid;
+  grid-template-columns: 23px 1fr;
+  grid-column-gap: 10px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    grid-column-gap: 8px;
+  }
+}
+
+.likes__icon {
+  fill: @grey;
+}
+
 .likes__counter {
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
+  text-align: left;
 }

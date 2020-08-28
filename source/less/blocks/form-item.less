@@ -1,6 +1,49 @@
+.form-wrap {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
 .form-item {
   border: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+
+    &:nth-child(3) {
+      order: -1;
+    }
+  }
 }
+
+.form-item input {
+  box-sizing: border-box;
+  padding: 16px 20px;
+  border: none;
+  background-color: @grey;
+  text-transform: none;
+}
+
+.form-item--half {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+
+// .form-item--fieldset-name {
+//
+// }
 
 .form-item__title {
   font-size: 18px;
@@ -8,21 +51,34 @@
   font-weight: bold;
 }
 
-.form-item__field {
-  font-size: 14px;
-  line-height: 26px;
-  text-align: left;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #333333;
+.form-item__field--name {
+  width: 100%;
+  display: inline-block;
+  margin: 20px auto 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }
 
 .form-item__name {
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
   text-transform: none;
-  background: #f2f2f2;
+  background: @grey;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
 }
 
 .form-item__name:placeholder {
@@ -30,61 +86,113 @@
   font-weight: bold;
   color: #000000;
 }
-// .form-item__name--big {
+
+.form-item__field--contact-wrap {
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+// .form-item__field--name {
+//   width: 100%;
+//   margin: 0 auto 20px;
 // }
+.form-item__field--contact {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
 .form-item__contacts {
+  width: 100%;
+  display: inline-block;
+  padding: 16px 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  background: @grey;
+  outline: none;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+.form-item__contacts:placeholder {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
-  background: #f2f2f2;
 }
 
-.form-item__icon {
+.form-item__contacts-wrap {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.form-item__phone-wrap::before {
   width: 58px;
   height: 58px;
-  background-color: #e6e6e6;
-  position: relative;
-}
-// .form-item__icon--phone {
-// }
-.form-item__icon--phone::after {
   content: "";
   position: absolute;
-  display: inline;
-  background: url("../img/icon-phone.svg") no-repeat;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  top: 50%;
-  width: 18px;
-  height: 18px;
-}
-// .form-item__icon--mail {
-// }
-.form-item__icon--mail::after {
-  content: "";
-  position: absolute;
-  display: inline;
-  background: url("../img/icon-mail.svg") no-repeat 50% 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  top: 50%;
-  width: 18px;
-  height: 18px;
+  background: #e6e6e6 url("../img/icon-phone.svg") no-repeat 50% 50%;
+  right: 0;
+  top: 0;
+  display: inline-block;
 }
 
-.form-item textarea {
-  font-family: "PT-Sans", "Arial", sans-serif;
+.form-item__mail-wrap::before {
+  width: 58px;
+  height: 58px;
+  content: "";
+  position: absolute;
+  background: #e6e6e6 url("../img/icon-mail.svg") no-repeat 50% 50%;
+  right: 0;
+  top: 0;
+  display: inline-block;
+}
+
+.form-item--textarea {
   border: none;
-  padding: 18px 21px 24px 21px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000;
-  text-transform: none;
-  background: #f2f2f2;
+  border-top: 1px solid #e6e6e6;
+  width: 100%;
+  text-align: center;
 }
 
 .form-item textarea:placeholder {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
+}
+
+.form-item textarea {
+  width: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  box-sizing: border-box;
+  border: none;
+  padding: 18px 21px 24px 21px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: none;
+  background: @grey;
+}
+
+.form-item__required {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    color: #333333;
+  }
 }
