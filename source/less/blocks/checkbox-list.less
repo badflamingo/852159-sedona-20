@@ -34,7 +34,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #000000;
-  margin: 0 auto 12px ;
+  margin: 0 auto 12px;
 
   @media (max-width: @tablet-width) {
     width: 280px;
@@ -51,7 +51,7 @@
   opacity: 0;
 }
 
-.checkbox-list__input+label {
+.checkbox-list__input + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -62,7 +62,7 @@
   line-height: 18px;
 }
 
-.checkbox-list__input+label::before {
+.checkbox-list__input + label::before {
   content: '';
   display: inline-block;
   width: 56px;
@@ -79,7 +79,7 @@
   background-color: @grey;
 }
 
-.checkbox-list__input:checked+label::before {
+.checkbox-list__input:checked + label::before {
   border-color: none;
   background-color: @grey;
   background-image: url("../img/icon-tick.svg");

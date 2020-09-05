@@ -8,7 +8,7 @@
 
 .navigation-button {
   display: block;
-  position:absolute;
+  position: absolute;
   top: 17px;
   right: 20px;
   width: 23px;
@@ -25,10 +25,9 @@
 }
 
 .navigation--opened .navigation-button {
-
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 8px;
     left: -1px;
@@ -57,7 +56,7 @@
 }
 
 .navigation--closed .navigation-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -76,10 +75,10 @@
   }
 }
 
-  @media (max-width: @mobile-width-only) {
-.navigation--closed .navigation__item {
-  display: none;
-}
+@media (max-width: @mobile-width-only) {
+  .navigation--closed .navigation__item {
+    display: none;
+  }
 }
 // .navigation--nojs .navigation__list {
 //   position: static;
