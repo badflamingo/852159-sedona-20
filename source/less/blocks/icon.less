@@ -1,9 +1,31 @@
+.icon-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: @white;
+
+  @media (max-width: @tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 24px;
+    width: 320px;
+  }
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
 .icon {
   color: #000000;
-  background-color: #ffffff;
+  background-color: @white;
+
+  @media (max-width: @tablet-width) {
+    position: relative;
+    padding: 14px 20px 14px 70px;
+    text-align: left;
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 60px 40px 62px 40px;
+    padding: 50px 5.5%;
   }
 
   @media (min-width: @desktop-width) {
@@ -11,12 +33,28 @@
   }
 }
 
+.icon__image-wrap {
+  margin-bottom: 23px;
+  @media (max-width: @tablet-width) {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+  }
+}
 
 .icon__title {
   margin: 0 auto;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+
+  @media (max-width: @tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 21px;
+  }
 }
 
 .icon__text {
@@ -24,19 +62,11 @@
   font-size: 14px;
 }
 
-.icon-wrap {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-  }
-}
-
 .icon__image {
   @media (min-width: @tablet-width) {
     width: 77px;
     height: 75px;
+
   }
 }
 

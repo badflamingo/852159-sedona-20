@@ -10,7 +10,14 @@
 }
 
 .likes__icon {
-  fill: @grey;
+  & path {
+    @media (max-width: @desktop-width) {
+      fill: fade(#000000, 30%);
+    }
+    @media (min-width: @desktop-width) {
+      fill: @white;
+    }
+  }
 }
 
 .likes__counter {
@@ -18,4 +25,8 @@
   line-height: 24px;
   font-weight: bold;
   text-align: left;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }

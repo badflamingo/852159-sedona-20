@@ -1,9 +1,15 @@
 .page-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin: 0 auto;
+  align-items: stretch;
+
+  @media (max-width: @tablet-width) {
+    padding: 35px 8% 16px;
+  }
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
+    padding: 35px 8% 37px;
   }
 }

@@ -9,10 +9,9 @@
 <body>
   <div class="page-wrap">
     <header class="page-header">
-      <a class="logo" href="index.html">
+      <a class="page-header__logo" href="index.html">
         <img width="101" height="84" alt="city of Sedona" src="img/logo-sedona-mobile.svg">
       </a>
-      <button class="list-button list-button--opened" type="button"></button>
       <nav class="navigation navigation--opened">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -28,8 +27,9 @@
             <a href="https://echo.htmlacademy.ru">HTML academy</a>
           </li>
         </ul>
+        <button class="navigation-button list-button--opened" type="button"></button>
       </nav>
-      <div class="intro intro-other">
+      <div class="page-header__intro page-header__intro--other">
         <img width="901" height="389" alt="Welcome to the gorgeous Sedona" src="https://via.placeholder.com/150x150">
       </div>
     </header>
@@ -56,7 +56,7 @@
             <legend class="form-item__title">Контактная информация:</legend>
             <div class="form-item__field--contact-wrap">
               <span class="form-item__field form-item__field--contact">
-                <label for="contact-telefone">Контактный телефон*:</label>
+                <label for="contact-telefone"><span class="contact-tablet">Контактный телефон*:</span><span class="contact-desktop">Телефон*:</span></label>
                 <span class="form-item__contacts-wrap form-item__phone-wrap">
                   <input class="form-item__contacts" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон" name="contact-telefone" id="contact-telefone" required>
                 </span>
@@ -73,16 +73,19 @@
             <legend class="form-item__title">Ваше общее впечатление:</legend>
             <ul class="form-item__field radio-list">
               <li class="radio-list__item">
-                <input class="radio-list__field" type="radio" id="positive" checked>
-                <label for="positive">Скорее положительное</label>
+                <input type="radio" id="positive" checked>
+                <span class="radio-list__box"></span>
+                <label class="radio-list__field" for="positive">Скорее положительное</label>
               </li>
               <li class="radio-list__item">
-                <input class="radio-list__field" type="radio" id="negative">
-                <label for="negative">Скорее отрицательное</label>
+                <input type="radio" id="negative">
+                <span class="radio-list__box"></span>
+                <label class="radio-list__field" for="negative">Скорее отрицательное</label>
               </li>
               <li class="radio-list__item">
-                <input class="radio-list__field" type="radio" id="dunno">
-                <label for="dunno">Затрудняюсь ответить</label>
+                <input type="radio" id="dunno">
+                <span class="radio-list__box"></span>
+                <label class="radio-list__field" for="dunno">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
@@ -90,24 +93,24 @@
             <legend class="form-item__title">Посещенные достопримечательности:</legend>
             <ul class="form-item__field checkbox-list">
               <li class="checkbox-list__item">
-                <input class="checkbox-list__field" type="checkbox" name="checkbox-field1" id="sight1" checked>
-                <label for="sight1">Мост Дьявола</label>
+                <input class="checkbox-list__input checkbox-list__box" type="checkbox" name="checkbox-field1" id="sight1" checked>
+                <label class="checkbox-list__field" for="sight1">Мост Дьявола</label>
               </li>
               <li class="checkbox-list__item">
-                <input class="checkbox-list__field" type="checkbox" name="checkbox-field2" id="sight2" checked>
-                <label for="sight2">Гора-Колокол</label>
+                <input class="checkbox-list__input checkbox-list__box" type="checkbox" name="checkbox-field2" id="sight2" checked>
+                <label class="checkbox-list__field" for="sight2">Гора-Колокол</label>
               </li>
               <li class="checkbox-list__item">
-                <input class="checkbox-list__field" type="checkbox" name="checkbox-field3" id="sight3" checked>
-                <label for="sight3">Слайд-парк</label>
+                <input class="checkbox-list__input checkbox-list__box" type="checkbox" name="checkbox-field3" id="sight3" checked>
+                <label class="checkbox-list__field" for="sight3">Слайд-парк</label>
               </li>
               <li class="checkbox-list__item">
-                <input class="checkbox-list__field" type="checkbox" name="checkbox-field4" id="sight4">
-                <label for="sight4">Красные скалы</label>
+                <input class="checkbox-list__input checkbox-list__box" type="checkbox" name="checkbox-field4" id="sight4">
+                <label class="checkbox-list__field" for="sight4">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form-item form-item--textarea">
+          <fieldset class="form-item form-item__textarea">
             <legend class="form-item__title">Опишите свои эмоции:</legend>
             <textarea name="form-item__comment" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>

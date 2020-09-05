@@ -3,14 +3,31 @@
   text-transform: uppercase;
 }
 
+.advantages__header {
+  padding: 40px 20px 26px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 510px;
+    padding: 48px 4% 30px;
+  }
+  // padding: 0 16.8%;
+}
+
 .advantages__title {
   font-size: 18px;
   line-height: 26px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
+  max-width: 256px;
+
+  @media (min-width: @tablet-width) {
+    max-width: none;
+    margin: 0 auto 30px;
+  }
 }
 
 .advantages__description {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 26px;
   margin: 0 auto;
 }

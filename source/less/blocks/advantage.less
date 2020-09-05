@@ -1,42 +1,63 @@
 .advantage {
+  box-sizing: border-box;
+  background-color: @blue;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
+
   }
 }
 
 .advantage__wrap {
-  @media (min-width: @tablet-width) {
-    // padding: 15.6% 12.5% 17.2%; почему все ползет если задавать паддинг в процентах?
-    width: 33%;
+  align-content: center;
+  box-sizing: border-box;
+
+  @media (max-width: @tablet-width) {
+    padding: 40px 5%;
   }
 
-  @media (min-width: @desktop-width) {
-    // padding: 53px 20px 40px 20px;
+  @media (min-width: @tablet-width) {
+    padding: 50px 5.5%;
+    width: 33%;
   }
+  //
+  // @media (min-width: @desktop-width) {
+  //
+  // }
 }
 
 .advantage__title {
   font-size: 21px;
   line-height: 26px;
-  margin: 0 auto;
+  margin: 0;
 }
 
-.advantage__number {
+.advantage__title p {
+  margin: 0;
+}
+
+.advantage__number  {
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 19px 0 13px;
+  }
 }
 
 .advantage__description {
   font-size: 14px;
   line-height: 21px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .advantage__picture--wrapper {
+  box-sizing: border-box;
+  background-color: @blue;
+
   @media (min-width: @tablet-width) {
     min-height: 256px;
     width: 66.6%;
     flex-grow: 1;
-    box-sizing: border-box;
   }
 }
