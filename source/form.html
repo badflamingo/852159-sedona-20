@@ -9,9 +9,11 @@
 <body>
   <div class="page-wrap">
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img width="101" height="84" alt="city of Sedona" src="img/logo-sedona-mobile.svg">
-      </a>
+      <div class="page-header__logo-wrap">
+        <a class="page-header__logo" href="index.html">
+          <img width="101" height="84" alt="city of Sedona" src="img/logo-sedona-mobile.svg">
+        </a>
+      </div>
       <nav class="navigation navigation--opened">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -52,7 +54,7 @@
             </label>
           </fieldset>
           <fieldset class="form-item">
-            <legend class="form-item__title">Контактная информация:</legend>
+            <legend class="form-item__title form-item__title--contact">Контактная информация:</legend>
             <div class="form-item__field--contact-wrap">
               <span class="form-item__field form-item__field--contact">
                 <label for="contact-telefone"><span class="contact-tablet">Контактный телефон*:</span><span class="contact-desktop">Телефон*:</span></label>
@@ -72,24 +74,24 @@
             <legend class="form-item__title">Ваше общее впечатление:</legend>
             <ul class="form-item__field radio-list">
               <li class="radio-list__item">
-                <input type="radio" id="positive" checked>
-                <span class="radio-list__box"></span>
+                <input class="radio-list__input" type="radio" id="positive" checked>
+                <!-- <span class="radio-list__box"></span> -->
                 <label class="radio-list__field" for="positive">Скорее положительное</label>
               </li>
               <li class="radio-list__item">
-                <input type="radio" id="negative">
-                <span class="radio-list__box"></span>
+                <input class="radio-list__input" type="radio" id="negative">
+                <!-- <span class="radio-list__box"></span> -->
                 <label class="radio-list__field" for="negative">Скорее отрицательное</label>
               </li>
               <li class="radio-list__item">
-                <input type="radio" id="dunno">
-                <span class="radio-list__box"></span>
+                <input class="radio-list__input" type="radio" id="dunno">
+                <!-- <span class="radio-list__box"></span> -->
                 <label class="radio-list__field" for="dunno">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form-item">
-            <legend class="form-item__title">Посещенные достопримечательности:</legend>
+            <legend class="form-item__title form-item__title--checkbox">Посещенные достопримечательности:</legend>
             <ul class="form-item__field checkbox-list">
               <li class="checkbox-list__item">
                 <input class="checkbox-list__input checkbox-list__box" type="checkbox" name="checkbox-field1" id="sight1" checked>
@@ -110,11 +112,11 @@
             </ul>
           </fieldset>
           <fieldset class="form-item form-item__textarea">
-            <legend class="form-item__title">Опишите свои эмоции:</legend>
+            <legend class="form-item__title form-item__title--textarea">Опишите свои эмоции:</legend>
             <textarea name="form-item__comment" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <input class="form__submit btn" type="submit" value="Отправить отзыв">
-          <p class="form-item__required">* - Обязательные поля</p>
+          <p class="form-item__required">* — Обязательные поля</p>
         </form>
       </section>
       <footer class="page-footer">

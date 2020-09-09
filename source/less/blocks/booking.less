@@ -6,13 +6,9 @@
 
 .booking-wrap {
   align-items: center;
-  padding: 28px 20px;
+  padding: 25px 20px;
   margin: 0 auto;
   box-sizing: border-box;
-
-  @media (max-width: @mobile-width-only) {
-    // padding: 28px 0;
-  }
 
   @media (max-width: @tablet-width) {
     width: 320px;
@@ -25,6 +21,7 @@
   @media (min-width: @tablet-width) {
     width: 500px;
     margin: 0 auto;
+    padding: 56px 20px 45px;
   }
 }
 
@@ -32,12 +29,24 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  margin: 0 auto 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin: 0 auto 30px;
+  }
 }
 
 .booking__text {
   text-align: center;
   font-size: 14px;
   line-height: 24px;
+  margin: 0 auto 27px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    margin: 0 auto 42px;
+  }
 }
 
 .booking__submit {

@@ -8,14 +8,16 @@
   justify-items: center;
   justify-content: center;
 
-  @media (max-width: @tablet-width) {
-    margin-bottom: 32px;
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 40px;
   }
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 5px;
+    padding-right: 8px;
+    padding-top: 5px;
   }
 }
 
@@ -40,15 +42,3 @@
 .social-list__item svg {
   transform: translateY(80%);
 }
-//
-// .social-list__item--twitter {
-//
-// }
-//
-// .social-list__item--facebook {
-//
-// }
-//
-// .social-list__item--youtube {
-//
-// }

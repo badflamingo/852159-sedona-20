@@ -26,6 +26,18 @@
 }
 
 .advantage-list__item--first {
+  @media (max-width: @tablet-width) {
+    &:before {
+      content: "";
+      display: block;
+      height: 20px;
+      padding-top: 20px;
+      background: @blue url("../img/bg-triangle.svg") no-repeat center;
+      background-size: cover;
+      width: 100%;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -40,6 +52,10 @@
 }
 
 .advantage-list__item--second {
+  //     @media (max-width: @tablet-width) {
+  // padding-top: 1px;
+  //     }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -94,9 +110,11 @@
   color: #000000;
   background-color: #eeeeee;
   text-align: center;
-  padding: 50px 10%;
+  padding: 25px 10%;
+  font-size: 14px;
+  line-height: 21px;
 
-  @media (max-width: @mobile-width-only) {
+  @media (max-width: @tablet-width) {
     margin: 0 auto;
     border-bottom: 1px solid #d6d6d6;
 
@@ -106,6 +124,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 50px 10%;
+    padding: 40px 17% 65px 12%;
   }
 }

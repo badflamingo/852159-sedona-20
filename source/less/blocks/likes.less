@@ -1,17 +1,23 @@
 .likes {
   display: inline-grid;
   grid-template-columns: 23px 1fr;
-  grid-column-gap: 10px;
-  text-align: center;
+  grid-column-gap: 15px;
+  text-align: left;
+  align-self: center;
 
   @media (min-width: @tablet-width) {
     grid-column-gap: 8px;
+    width: 23%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 18%;
   }
 }
 
 .likes__icon {
   & path {
-    @media (max-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
       fill: fade(#000000, 30%);
     }
 

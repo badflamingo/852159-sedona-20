@@ -6,7 +6,7 @@
 
   @media (max-width: @tablet-width) {
     padding-top: 20px;
-    padding-bottom: 24px;
+    padding-bottom: 22px;
     width: 320px;
   }
 
@@ -30,38 +30,65 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 40px 83px 40px;
+    padding: 60px 55px 80px 40px;
   }
 }
 
 .icon__image-wrap {
-  margin-bottom: 23px;
+  margin-bottom: 13px;
 
   @media (max-width: @tablet-width) {
     position: absolute;
-    top: 8px;
-    left: 10px;
+    top: 5px;
+    left: 20px;
   }
 }
 
+.icon__description {
+  @media (max-width: @tablet-width) {
+    line-height: 15px;
+    font-size: 21px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 21px;
+  }
+
+}
+
 .icon__title {
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+  text-align: center;
 
   @media (max-width: @tablet-width) {
     margin-bottom: 15px;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 21px;
+    margin-bottom: 23px;
+    font-size: 21px;
+    line-height: 26px;
   }
 }
 
 .icon__text {
   margin: 0 auto;
   font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 5px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 14px 0 5px;
+  }
 }
 
 .icon__image {
@@ -80,5 +107,13 @@
 .icon--house {
   @media (min-width: @tablet-width) {
     order: -2;
+  }
+}
+
+.icon--gift {
+  @media (max-width: @desktop-width) {
+    br {
+      display: none;
+    }
   }
 }
