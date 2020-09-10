@@ -6,12 +6,12 @@
 
 .booking-wrap {
   align-items: center;
-  padding: 25px 20px;
   margin: 0 auto;
   box-sizing: border-box;
 
-  @media (max-width: @tablet-width) {
+  @media (max-width: @mobile-width-only) {
     width: 320px;
+    padding: 32px 20px;
 
     .booking__text br {
       display: none;
@@ -21,7 +21,13 @@
   @media (min-width: @tablet-width) {
     width: 500px;
     margin: 0 auto;
-    padding: 56px 20px 45px;
+    padding: 56px 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 500px;
+    margin: 0 auto;
+    padding: 55px 25px 67px;
   }
 }
 
@@ -29,9 +35,14 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  margin: 0 auto 25px;
+  margin: 0 auto 23px;
 
   @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin: 0 auto 35px;
+  }
+
+  @media (min-width: @desktop-width) {
     font-size: 30px;
     margin: 0 auto 30px;
   }
@@ -44,6 +55,11 @@
   margin: 0 auto 27px;
 
   @media (min-width: @tablet-width) {
+    font-size: 14px;
+    margin: 0 auto 38px;
+  }
+
+  @media (min-width: @desktop-width) {
     font-size: 14px;
     margin: 0 auto 42px;
   }
@@ -58,6 +74,7 @@
   background-color: @blue;
   padding: 16px;
   margin: 0 auto;
+  text-decoration: none;
 
   &:hover {
     background-color: @blue-hover;
@@ -70,9 +87,5 @@
 
   &:disabled {
     background-color: @grey-hover;
-  }
-
-  a {
-    text-decoration: none;
   }
 }
