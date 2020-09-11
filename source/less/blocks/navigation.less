@@ -3,6 +3,10 @@
   width: auto;
   background-color: @white;
 
+  @media (max-width: @mobile-width-only) {
+    position: static;
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 56px;
   }
@@ -62,11 +66,11 @@
   }
 }
 
-.navigation--closed .navigation-button::before {
+.navigation--closed .navigation-button {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  // top: 0;
+  // left: 0;
   width: 23px;
   height: 4px;
   color: white;
@@ -74,13 +78,14 @@
   box-shadow: 0 8px 0 0 @blue, 0 16px 0 0 @blue;
 
   &:hover {
-    background-color: fade(@blue, 40%);
+    opacity: 0.4;
   }
 
   &:active {
-    background-color: fade(@blue, 70%);
+    opacity: 0.7;
   }
 }
+
 
 @media (max-width: @mobile-width-only) {
   .navigation--closed .navigation__item {
