@@ -1,42 +1,94 @@
 .advantage {
+  box-sizing: border-box;
+  background-color: @blue;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
   }
 }
 
+
 .advantage__wrap {
+  align-content: center;
+  line-height: 21px;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 37px 0 38px;
+    width: 300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
   @media (min-width: @tablet-width) {
-    // padding: 15.6% 12.5% 17.2%; почему все ползет если задавать паддинг в процентах?
+    padding: 40px 0;
     width: 33%;
   }
 
   @media (min-width: @desktop-width) {
-    // padding: 53px 20px 40px 20px;
+    padding: 50px 0;
+    width: 33%;
   }
 }
 
 .advantage__title {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin: 0 50px 13px;
+  }
+}
+
+.advantage__title p {
+  margin: 0;
 }
 
 .advantage__number {
-  margin: 0 auto;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto 24px;
+  }
 }
 
 .advantage__description {
   font-size: 14px;
   line-height: 21px;
+  text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (max-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .advantage__picture--wrapper {
+  box-sizing: border-box;
+  background-color: @blue;
+
   @media (min-width: @tablet-width) {
     min-height: 256px;
     width: 66.6%;
     flex-grow: 1;
-    box-sizing: border-box;
   }
 }

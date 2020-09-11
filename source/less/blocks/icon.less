@@ -1,35 +1,106 @@
-.icon {
-  color: #000000;
-  background-color: #ffffff;
+.icon-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: @white;
 
-  @media (min-width: @tablet-width) {
-    padding: 60px 40px 62px 40px;
+  @media (max-width: @mobile-width-only) {
+    padding-top: 20px;
+    padding-bottom: 22px;
+    width: 320px;
   }
 
-  @media (min-width: @desktop-width) {
-    padding: 60px 40px 83px 40px;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
   }
 }
 
+.icon {
+  color: #000000;
+  background-color: @white;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    padding: 14px 20px 13px 70px;
+    text-align: left;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 55px 27px 60px;
+    width: 33.3%;
+    flex-grow: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 55px 80px 40px;
+  }
+}
+
+.icon__image-wrap {
+  margin-bottom: 13px;
+
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 4px;
+    left: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.icon__description {
+  @media (max-width: @mobile-width-only) {
+    line-height: 15px;
+    font-size: 21px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 21px;
+    margin: 0 auto;
+  }
+}
 
 .icon__title {
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin: 0;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .icon__text {
   margin: 0 auto;
   font-size: 14px;
-}
-
-.icon-wrap {
-  display: flex;
-  flex-direction: column;
+  line-height: 21px;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
+    margin: 0 5px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 8px 0 5px;
+  }
+
+  @media (max-width: @desktop-width) {
+    br {
+      display: none;
+    }
   }
 }
 
@@ -49,5 +120,13 @@
 .icon--house {
   @media (min-width: @tablet-width) {
     order: -2;
+  }
+}
+
+.icon--gift {
+  @media (max-width: @desktop-width) {
+    br {
+      display: none;
+    }
   }
 }

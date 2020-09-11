@@ -3,32 +3,103 @@
   width: 100%;
   font-size: 18px;
   font-weight: bold;
-  text-align: left;
   color: #000000;
   text-transform: none;
-  background: #f2f2f2;
+  text-align: left;
+  background: @white;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+    line-height: 26px;
+  }
 
   @media (min-width: @tablet-width) {
     width: 550px;
+    padding-left: 95px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 38px;
+  }
 
-    @media (min-width: @desktop-width) {
-      width: 100%;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    margin-bottom: 35px;
   }
 }
 
 .checkbox-list__item {
   width: 47%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 auto 17px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 47%;
+    margin: 0 0 25px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin: 0 0 25px 0;
+  }
+}
+
+.checkbox-list__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox-list__input + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 0;
+}
+
+.checkbox-list__input + label::before {
+  content: "";
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: none;
+  border-radius: 5px;
+  margin-right: 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  vertical-align: middle;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 23px;
+  }
+}
+
+.checkbox-list__input:checked + label::before {
+  outline: none;
+  background-color: @grey;
+  background-image: url("../img/icon-tick.svg");
 }
 
 .checkbox-list__field {
-  width: 46px;
-  height: 46px;
-  background: #f2f2f2;
+  @media (max-width: @desktop-width) {
+    text-align: right;
+  }
 }

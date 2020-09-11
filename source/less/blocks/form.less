@@ -1,24 +1,69 @@
 .form {
   font-family: "PT Sans", "Arial", sans-serif;
   display: block;
+
+  input {
+    font-family: "PT Sans", "Arial", sans-serif;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: -5px;
+  }
 }
 
 .form__header {
   text-align: center;
+  padding: 35px 20px 17px;
+
+  @media (max-width: @mobile-width-only) {
+    border-bottom: @form-border;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 20px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 108px 20px 25px;
+    line-height: 26px;
+  }
 }
 
 .form__title {
   font-size: 18px;
   line-height: 26px;
+  margin: 0 auto 29px;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 .form__description {
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    max-width: 330px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 444px;
+    line-height: 24px;
+    margin: 0 auto 32px;
+  }
 }
 
 .form__submit {
-  width: 324px;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  width: 280px;
   height: 58px;
   border: none;
   font-size: 21px;
@@ -27,6 +72,22 @@
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff;
+  color: @white;
   background-color: @blue;
+  padding: 0;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 322px;
+    padding: 18px 23px 20px 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    margin-bottom: 7px;
+    padding: 18px 23px 20px 20px;
+  }
 }

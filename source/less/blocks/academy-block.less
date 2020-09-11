@@ -11,4 +11,17 @@
 .academy-link__ex {
   font-size: 14px;
   line-height: 26px;
+
+  svg {
+    margin-left: 10px;
+    vertical-align: middle;
+
+    &:hover {
+      fill: @blue;
+    }
+
+    &:active {
+      fill: fade(#000000, 30%);
+    }
+  }
 }

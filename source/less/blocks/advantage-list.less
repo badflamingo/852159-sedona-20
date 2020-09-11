@@ -1,23 +1,43 @@
 .advantage-list {
   display: flex;
   flex-direction: column;
-  margin: auto 0;
+  margin: 0 auto;
   padding: 0;
+
+  ul {
+    margin: 0;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    background-color: #eeeeee;
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 0.9fr 1fr;
   }
 }
 
 .advantage-list__item {
   box-sizing: border-box;
-  min-height: 170px;
+  min-height: 168px;
   font-size: 14px;
   line-height: 26px;
 }
 
 .advantage-list__item--first {
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      display: block;
+      height: 20px;
+      padding-top: 20px;
+      background: @blue url("../img/bg-triangle.svg") no-repeat center;
+      background-size: cover;
+      width: 100%;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -25,9 +45,12 @@
 
   .advantage__picture--wrapper {
     background: url("../img/main-city-tablet@1x.jpg");
-    min-height: 260px;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: @mobile-width-only) {
+      min-height: 260px;
+    }
   }
 }
 
@@ -35,13 +58,20 @@
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
+
+    .advantage__picture--wrapper {
+      order: -1;
+    }
   }
 
   .advantage__picture--wrapper {
     background: url("../img/main-bridge-tablet@1x.jpg");
-    min-height: 260px;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: @mobile-width-only) {
+      min-height: 260px;
+    }
   }
 }
 
@@ -67,8 +97,8 @@
 }
 
 .advantage-list__item--blue {
-  color: #ffffff;
-  background-color: @blue;
+  color: @white;
+  background-color: @white;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -77,7 +107,29 @@
 }
 
 .advantage-list__item--grey {
-  padding: 20px;
+  align-content: center;
+  box-sizing: border-box;
   color: #000000;
   background-color: #eeeeee;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 25px 4% 25px;
+    margin: 0 6%;
+    border-bottom: 1px solid #d6d6d6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 42px 13px 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 42px 5.5% 65px;
+  }
 }

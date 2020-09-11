@@ -2,21 +2,97 @@
   font-size: 18px;
   font-weight: bold;
   text-align: left;
+  align-content: center;
   color: #000000;
   text-transform: none;
-  padding: 0;
   margin: 0 auto;
+  padding: 0;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 2px 15px 12px;
+    line-height: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0 auto 0 -10px;
+    line-height: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto 0 -5px;
+  }
 }
 
 .radio-list__item {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto 12px;
+    width: 280px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 15px 7px;
+
+    label {
+      line-height: 61px;
+    }
+  }
+}
+
+.radio-list__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio-list__input + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 0;
+}
+
+.radio-list__input + label::before {
+  content: "";
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: none;
+  margin-right: 23px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  vertical-align: middle;
+  background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.radio-list__input:checked + label::before {
+  outline: none;
+  background-color: @grey;
+  background-image: url("../img/Shape7.svg");
+  background-position: center;
+  background-size: 22px;
 }
 
 .radio-list__field {
-  color: #333333;
-  background: @grey;
-  width: 48px;
-  height: 48px;
+  @media (max-width: @desktop-width) {
+    text-align: right;
+  }
 }
