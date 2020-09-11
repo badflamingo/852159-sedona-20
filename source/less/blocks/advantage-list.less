@@ -26,6 +26,18 @@
 }
 
 .advantage-list__item--first {
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      display: block;
+      height: 20px;
+      padding-top: 20px;
+      background: @blue url("../img/bg-triangle.svg") no-repeat center;
+      background-size: cover;
+      width: 100%;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -33,9 +45,12 @@
 
   .advantage__picture--wrapper {
     background: url("../img/main-city-tablet@1x.jpg");
-    // min-height: 260px;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: @mobile-width-only) {
+          min-height: 260px;
+    }
   }
 }
 
@@ -51,9 +66,12 @@
 
   .advantage__picture--wrapper {
     background: url("../img/main-bridge-tablet@1x.jpg");
-    // min-height: 240px;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (max-width: @mobile-width-only) {
+          min-height: 260px;
+    }
   }
 }
 
