@@ -1,4 +1,3 @@
-
 function setup_navigation() {
 
   var navMain = document.querySelector('.navigation');
@@ -20,4 +19,5 @@ function setup_navigation() {
     }
   };
 }
-window.onload = setup_navigation
+
+window.onload = setup_navigation;

@@ -1,0 +1,93 @@
+.popup {
+  position: fixed;
+  top: 120px;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+  width: 320px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 26px;
+  background-color: @white;
+  box-shadow: 0 15px 20px fade(@black, 20%);
+}
+
+.popup--success {
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+}
+
+.popup--fail {
+  @media (min-width: @tablet-width) {
+    width: 400px;
+  }
+}
+
+.popup--show {
+  display: block;
+}
+
+.popup__wrap {
+  padding: 35px 70px;
+
+  &--sent {
+    background-color: @grey;
+    padding: 20px;
+    margin-top: 30px;
+
+    @media (min-width: @tablet-width) {
+      padding: 45px 90px;
+    }
+  }
+}
+
+.popup__text {
+  font-size: 14px;
+  padding: 0 50px;
+}
+
+.popup__title {
+  font-size: 18px;
+  margin-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-top: 50px;
+    padding: 0 25px;
+    line-height: 40px;
+  }
+}
+
+.popup__button {
+  padding: 15px 0;
+  width: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: @white;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  background-color: @blue;
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    color: @white;
+    background-color: @blue-down;
+    outline: none;
+  }
+
+  &:disabled {
+    color: @white;
+    background-color: @grey;
+  }
+}

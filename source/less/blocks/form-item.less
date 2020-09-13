@@ -24,6 +24,19 @@
     padding: 0;
   }
 
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    &:hover {
+      background-color: @grey-hover;
+    }
+
+    &:active {
+      background-color: @white;
+      border: @form-border;
+    }
+  }
+
   @media (max-width: @mobile-width-only) {
     border-bottom: @form-border;
     margin-top: 19px;

@@ -15,7 +15,29 @@ const svgstore = require("gulp-svgstore");
 const clean = () => {
   return del("build");
 };
-// Styles
+
+const html = () => {
+  return gulp.src("source/*.html",
+  {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ],
+  {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+}
+
+// Styles0
 
 const styles = () => {
   return gulp.src("source/less/style.less")
@@ -32,14 +54,13 @@ const styles = () => {
   .pipe(sync.stream());
 }
 
-exports.styles = styles;
 
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -48,7 +69,6 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
 
 // Watcher
 
@@ -57,9 +77,6 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
@@ -75,7 +92,6 @@ const webpx = () => {
   .pipe(webp({quality:90}))
   .pipe(gulp.dest("build/img"))
 }
-exports.webp = webpx;
 
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
@@ -83,26 +99,18 @@ const sprite = () => {
   pipe(rename("sprite.svg"))
   pipe(gulp.dest("source/img"))
 }
+
+const build = gulp.series(clean, copy, styles, sprite, html);
+const start = gulp.series(build, server, watcher);
+
+exports.server = server;
+exports.webp = webpx;
 exports.sprite = sprite;
-
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
-  ],
-  {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"));
-}
 exports.copy = copy;
+exports.styles = styles;
+exports.clean = clean;
+exports.hmtl = html;
 
-const build = () => gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
-);
+exports.build = build;
+exports.start = start;
+exports.default = start;
