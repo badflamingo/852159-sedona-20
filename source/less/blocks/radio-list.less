@@ -86,9 +86,19 @@
 .radio-list__input:checked + label::before {
   outline: none;
   background-color: @grey;
-  background-image: url("../img/Shape7.svg");
+  background-image: url("../img/Shape.svg");
   background-position: center;
   background-size: 22px;
+}
+
+.radio-list__input:hover + label::before,
+.radio-list__input:focus + label::before {
+  background-color: @grey-hover;
+}
+
+.radio-list__input:active + label::before {
+  background-color: #d5d5d5;
+  opacity: 0.4;
 }
 
 .radio-list__field {

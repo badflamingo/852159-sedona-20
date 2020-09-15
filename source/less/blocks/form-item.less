@@ -8,17 +8,8 @@
     padding: 0;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    &:hover {
-      background-color: @grey-hover;
-    }
-
-    &:active {
-      background-color: @white;
-      border: @form-border;
-    }
+  li {
+    list-style: none;
   }
 
   @media (max-width: @mobile-width-only) {
@@ -41,10 +32,22 @@
 .form-item input {
   box-sizing: border-box;
   padding: 16px 20px;
-  border: none;
   background-color: @grey;
   text-transform: none;
   font-size: 18px;
+  outline: none;
+  border: 1px solid transparent;
+
+  &:hover,
+  &:focus {
+    background-color: @grey-hover;
+    outline-offset: -2px;
+  }
+
+  &:active {
+    background-color: @white;
+    border: @form-border;
+  }
 }
 
 .form-item--half {
@@ -136,6 +139,15 @@
     flex-grow: 1;
     margin-left: 15px;
   }
+
+  &:focus {
+    background-color: @grey-hover;
+  }
+
+  &:active {
+    background-color: @white;
+    border: @form-border;
+  }
 }
 
 .form-item__name:placeholder {
@@ -166,11 +178,11 @@
 
 .form-item__title--contact {
   @media (min-width: @tablet-width) {
-    padding: 0 60px;
+    padding: 0 58px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 74px;
+    margin-bottom: 71px;
   }
 }
 
@@ -226,13 +238,13 @@
   }
 }
 
-.contact-desktop {
+.form-item__contact-desktop {
   @media (max-width: @desktop-width) {
     display: none;
   }
 }
 
-.contact-tablet {
+.form-item__contact-tablet {
   @media (min-width: @desktop-width) {
     display: none;
   }
@@ -353,6 +365,7 @@
   background: @grey;
   margin: 0 auto;
   line-height: 26px;
+  outline: none;
 
   @media (max-width: @mobile-width-only) {
     width: 280px;
@@ -360,6 +373,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 16px 20px;
+  }
+
+  &:focus {
+    outline-offset: 0;
   }
 }
 

@@ -10,10 +10,10 @@ const del = require("del");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const uglify = require('gulp-uglify');
 const pipeline = require('readable-stream').pipeline;
 const htmlmin = require('gulp-htmlmin');
+const svgstore = require("gulp-svgstore");
 
 const clean = () => {
   return del("build");
@@ -80,7 +80,6 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 };
 
-
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
   .pipe(imagemin([
@@ -96,18 +95,18 @@ const webpx = () => {
   .pipe(gulp.dest("build/img"))
 };
 
+const minhtml = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
+};
+
+
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
   .pipe(svgstore())
   pipe(rename("sprite.svg"))
   pipe(gulp.dest("source/img"))
-};
-
-
-const minhtml = () => {
-  return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
 };
 
 const build = gulp.series(clean, copy, minify_js, styles, sprite, minhtml);
@@ -116,7 +115,6 @@ const start = gulp.series(build, server, watcher);
 exports.minify_js = minify_js;
 exports.server = server;
 exports.webp = webpx;
-exports.sprite = sprite;
 exports.copy = copy;
 exports.styles = styles;
 exports.clean = clean;
@@ -125,3 +123,4 @@ exports.minhtml = minhtml;
 exports.build = build;
 exports.start = start;
 exports.default = start;
+exports.sprite = sprite;
