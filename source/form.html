@@ -27,7 +27,7 @@
               <a href="https://echo.htmlacademy.ru">HTML academy</a>
             </li>
           </ul>
-          <button class="navigation-button list-button--opened" type="button" aria-label="закрыть меню"></button>
+          <button class="navigation-button navigation-button--opened" type="button" aria-label="закрыть меню" tabindex="1"></button>
         </nav>
         <div class="page-header__logo-wrap">
           <a class="page-header__logo" href="index.html">
@@ -122,14 +122,14 @@
           <textarea name="form-item__comment" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <input class="form__submit btn" type="submit" value="Отправить отзыв">
-        <p class="form-item__required">* — Обязательные поля
+        <p class="form__required">* — Обязательные поля
         </p>
       </form>
     </section>
     <footer class="page-footer">
       <p class="hashtag">#VISITSEDONA
       </p>
-      <div class="social-list__wrap">
+      <div class="social-list-wrap">
         <ul class="social-list">
           <li>
             <a class="social-list__item social-list__item--twitter" href="https://echo.htmlacademy.ru">
@@ -181,7 +181,7 @@
       </p>
     </div>
     <div class="popup__wrap popup__wrap--sent">
-      <button class="popup__button button button--sent" type="button">Закрыть окно</button>
+      <button class="popup__button button popup__button--sent" type="button">Закрыть окно</button>
     </div>
   </div>
   <div class="popup popup--fail">
@@ -190,7 +190,7 @@
       <p class="popup__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     </div>
     <div class="popup__wrap">
-      <button class="popup__button button--error" type="button">Ок</button>
+      <button class="popup__button popup__button--error" type="button">Ок</button>
     </div>
   </div>
   <script src="/js/menu.js"></script>

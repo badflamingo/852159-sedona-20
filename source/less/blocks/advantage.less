@@ -22,12 +22,13 @@
 
   @media (min-width: @tablet-width) {
     padding: 40px 0;
-    width: 33%;
+    width: 33.3%;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 0;
+    padding: 50px 0 40px;
     width: 33%;
+    box-sizing: border-box;
   }
 }
 
@@ -45,6 +46,9 @@
   @media (min-width: @tablet-width) {
     font-size: 21px;
     margin: 0 50px 13px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -80,9 +84,15 @@
       display: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.advantage__picture--wrapper {
+.advantage__picture-wrapper {
   box-sizing: border-box;
   background-color: @blue;
 

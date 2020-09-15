@@ -26,13 +26,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 55px 27px 60px;
-    width: 33.3%;
-    flex-grow: 1;
+    padding: 55px 10px 60px;
+    width: 33.33%;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 55px 80px 40px;
+    padding: 58px 40px 80px 40px;
+    flex-grow: 1;
   }
 }
 
@@ -90,17 +90,12 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 5px;
+    padding: 0 20px;
     text-align: center;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 8px 0 5px;
-  }
-
-  @media (max-width: @desktop-width) {
-    br {
-      display: none;
-    }
   }
 }
 
@@ -108,10 +103,17 @@
   @media (min-width: @tablet-width) {
     width: 77px;
     height: 75px;
+    // flex-grow: 1
   }
 }
 
 .icon--burger {
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     order: -1;
   }
@@ -120,13 +122,21 @@
 .icon--house {
   @media (min-width: @tablet-width) {
     order: -2;
+    flex-grow: 1;
   }
 }
 
 .icon--gift {
-  @media (max-width: @desktop-width) {
+  @media (max-width: @mobile-width-only) {
     br {
       display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    .icon__text {
+      padding: 0 5px;
     }
   }
 }

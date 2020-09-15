@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function(){
   var reviewForm = document.querySelector(".form-wrap");
   var sentPopup = document.querySelector(".popup--success");
   var errorPopup = document.querySelector(".popup--fail");
-  var closeSent = document.querySelector(".button--sent");
-  var closeError = document.querySelector(".button--error");
+  var closeSent = document.querySelector(".popup__button--sent");
+  var closeError = document.querySelector(".popup__button--error");
   var formName = document.querySelector("#name");
   var formSurname = document.querySelector("#last-name");
   var formPhone = document.querySelector("#contact-telefone");

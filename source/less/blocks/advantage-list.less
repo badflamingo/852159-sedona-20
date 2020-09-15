@@ -38,12 +38,20 @@
     }
   }
 
+  .advantage__description {
+    @media (min-width: @desktop-width) {
+      width: 270px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
   }
 
-  .advantage__picture--wrapper {
+  .advantage__picture-wrapper {
     @media (max-width: @mobile-width-only) {
       background: url("../img/main-city-mobile@1x.jpg");
       background-repeat: no-repeat;
@@ -51,7 +59,7 @@
       min-height: 260px;
 
       @media (min-resolution: 144dpi),
-        (min-resolution: 2dppx) {
+      (min-resolution: 2dppx) {
         background: @blue url("../img/main-city-mobile@2x.jpg") no-repeat center;
         background-size: cover;
       }
@@ -61,10 +69,10 @@
       background: url("../img/main-city-tablet@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      min-height: 260px;
+      min-height: 256px;
 
       @media (min-resolution: 144dpi),
-        (min-resolution: 2dppx) {
+      (min-resolution: 2dppx) {
         background: @blue url("../img/main-city-tablet@2x.jpg") no-repeat center;
         background-size: cover;
       }
@@ -74,10 +82,10 @@
       background: url("../img/main-city-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      min-height: 260px;
+      min-height: 256px;
 
       @media (min-resolution: 144dpi),
-        (min-resolution: 2dppx) {
+      (min-resolution: 2dppx) {
         background: @blue url("../img/main-city-desktop@2x.jpg") no-repeat center;
         background-size: cover;
       }
@@ -90,12 +98,12 @@
     grid-column-start: 1;
     grid-column-end: 4;
 
-    .advantage__picture--wrapper {
+    .advantage__picture-wrapper {
       order: -1;
     }
   }
 
-  .advantage__picture--wrapper {
+  .advantage__picture-wrapper {
     @media (max-width: @mobile-width-only) {
       background: url("../img/main-bridge-mobile@1x.jpg");
       background-repeat: no-repeat;
@@ -103,7 +111,7 @@
       min-height: 260px;
 
       @media (min-resolution: 144dpi),
-        (min-resolution: 2dppx) {
+      (min-resolution: 2dppx) {
         background: @blue url("../img/main-bridge-mobile@2x.jpg") no-repeat center;
         background-size: cover;
       }
@@ -113,10 +121,10 @@
       background: url("../img/main-bridge-tablet@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      min-height: 260px;
+      min-height: 256px;
 
       @media (min-resolution: 144dpi),
-        (min-resolution: 2dppx) {
+      (min-resolution: 2dppx) {
         background: @blue url("../img/main-bridge-tablet@2x.jpg") no-repeat center;
         background-size: cover;
       }
@@ -126,11 +134,11 @@
       background: url("../img/main-bridge-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      min-height: 260px;
+      min-height: 256px;
 
       @media (min-resolution: 144dpi),
-        (min-resolution: 2dppx) {
-        background: @blue url("../img/main-bridge-desktop@2x.jpg") no-repeat center;
+      (min-resolution: 2dppx) {
+        background: @blue url("../img/main-bridge-desktop@2x.jpg") no-repeat top;
         background-size: cover;
       }
     }
@@ -192,6 +200,69 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 42px 5.5% 65px;
+    padding: 42px 55px 65px 55px;
   }
+}
+
+.advantage-list__number {
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto 24px;
+  }
+}
+
+.advantage-list__description {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (max-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.advantage-list__title {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 auto 10px;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin: 0 auto 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.advantage-list__title p {
+  margin: 0;
 }
