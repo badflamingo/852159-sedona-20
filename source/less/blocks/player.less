@@ -14,7 +14,7 @@
   margin: 0 auto;
 
   @media (min-resolution: 144dpi),
-  (min-resolution: 2dppx) {
+    (min-resolution: 2dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
   }
 
@@ -24,7 +24,7 @@
     height: 500px;
 
     @media (min-resolution: 144dpi),
-    (min-resolution: 2dppx) {
+      (min-resolution: 2dppx) {
       background-image: url("../img/video-tablet@2x.jpg");
     }
   }
@@ -35,7 +35,7 @@
     height: 500px;
 
     @media (min-resolution: 144dpi),
-    (min-resolution: 2dppx) {
+      (min-resolution: 2dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
     }
   }
@@ -110,8 +110,7 @@
     margin-bottom: 14px;
   }
 
-  &::-webkit-slider-thumb,
-  {
+  &::-webkit-slider-thumb {
     appearance: none;
     height: 9px;
     width: 9px;
@@ -166,7 +165,7 @@
   }
 }
 
-@-moz-document url-prefix() {
+@-moz-document url-prefix("") {
   .player__progress-bar {
     @media (min-width: @tablet-width) {
       width: 389px;

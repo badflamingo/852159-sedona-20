@@ -127,16 +127,17 @@
 }
 
 .icon--gift {
-  @media (max-width: @mobile-width-only) {
-    br {
-      display: none;
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+
+    .icon__text {
+      padding: 0 10px;
     }
   }
 
-  @media (min-width: @tablet-width) {
-    flex-grow: 1;
-    .icon__text {
-      padding: 0 5px;
+  @media (max-width: @desktop-width) {
+    br {
+      display: none;
     }
   }
 }

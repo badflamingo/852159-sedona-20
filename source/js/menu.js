@@ -1,7 +1,7 @@
 function setup_navigation() {
 
   var navMain = document.querySelector('.navigation');
-  var navButton = document.querySelector('.navigation-button');
+  var navButton = document.querySelector('.navigation__button');
 
   navMain.classList.remove('navigation--nojs');
   navMain.classList.remove('navigation--opened');
